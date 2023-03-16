@@ -3,7 +3,7 @@ const passport = require("passport");
 const passportJWT = require("passport-jwt");
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
-const User = require("./models/user");
+const User = require("./sequelize/models/user");
 const bcrypt = require("bcryptjs");
 passport.use(
   new LocalStrategy(

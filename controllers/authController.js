@@ -1,5 +1,5 @@
 const { body, validationResult } = require("express-validator");
-const User = require("../models/user");
+const User = require("../sequelize/models/user");
 const bcrypt = require("bcryptjs");
 const passport = require("passport");
 // const { uploadToCloudinary, removeFromCloudinary } = require("./cloudinary");

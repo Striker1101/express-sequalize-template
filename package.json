@@ -6,9 +6,13 @@
   },
   "private": true,
   "scripts": {
+    "run-seed": "npx sequelize-cli db:seed:all",
+    "make-seed": "npx sequelize-cli seed:generate --name demo-user",
+    "migrate": "npx sequelize-cli db:migrate",
+    "make-model": "npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string",
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
-    "serverstart": "SET DEBUG=mongodb:* & npm run devstart"
+    "serverstart": "SET DEBUG=postgres:* & npm run devstart"
   },
   "dependencies": {
     "async": "^3.2.4",
